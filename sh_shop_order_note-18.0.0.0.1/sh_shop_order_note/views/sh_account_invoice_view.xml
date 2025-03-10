@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_account_invoice_form_view" model="ir.ui.view">
+        <field name="name">sh.account.invoice.form.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page name="sh_customer_order_comment" string="Customer Order Comment">
+                    <field name="sh_order_comment_invoice" nolabel="1" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

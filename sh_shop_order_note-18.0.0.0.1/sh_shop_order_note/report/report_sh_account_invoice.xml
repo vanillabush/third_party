@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_sh_account_invoice_template" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[hasclass('clearfix')]" position="after">
+            <t t-if="o.sh_order_comment_invoice">
+                <div><b>Customer Order Comment : </b><span t-field="o.sh_order_comment_invoice" /></div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

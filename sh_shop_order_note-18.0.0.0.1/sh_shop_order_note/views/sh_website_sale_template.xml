@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sh_shop_order_comment" inherit_id="website_sale.payment" active="False" customize_show="True" name="Show Customer Order Comment">
+        <xpath expr="//div[4]" position="inside">
+            <div class="mb8 row">
+                <div t-attf-class="form-group col-lg-12">
+                    <label class="control-label mb-2" for="sh_customer_order_comment_id">
+                        <b>Your Comment</b>
+                    </label>
+                    <textarea rows="3" id="sh_customer_order_comment_id" class="form-control" placeholder="Write a comment..."></textarea>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

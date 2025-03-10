@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_sh_stock_picking_operation_template" inherit_id="stock.report_picking">
+        <xpath expr="//div[hasclass('page')]//table[2]" position="after">
+            <t t-if="o.sh_order_comment_picking">
+                <div><b>Customer Order Comment : </b><span t-field="o.sh_order_comment_picking" /></div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

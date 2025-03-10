@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- <t t-name="ProductsWidgetCustom" t-inherit="point_of_sale.ProductsWidget" t-inherit-mode="extension" owl="1"> -->
+    <t t-name="ProductsWidgetCustom" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension">
+        <xpath expr="//ProductCard" position="attributes">
+            <!-- <t t-if="product.type == 'product' and product.show_qty_in_pos"> -->
+            <t t-if="product.is_storable and product.show_qty_in_pos">
+                <attribute name="productQtyAvailable">product.qty_available</attribute>
+                <attribute name="uomId">product.uom_id[1]</attribute>
+            </t>
+        </xpath>
+    </t>
+</templates>
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<templates id="template_items_description" xml:space="preserve">-->
+<!--    -->
+<!--    <t t-extend="Product">-->
+<!--        <t t-jquery="img" t-operation="append"> odoo13-->
+<!--        <t t-jquery=".product-name" t-operation="append">-->
+<!--            <t t-if="product.type == 'product' and product.show_qty_in_pos">-->
+<!--                <span class="qty-available"> odoo13-->
+<!--                <span class="price_display pos-receipt-right-align" -->
+<!--                style="float:right; color: white; line-height: 13px; background: #7f82ac; padding: 2px 5px; border-radius: 2px;">-->
+<!--                    <t t-esc="product.qty_available"/><t t-esc="product.uom_id[1]"/>-->
+<!--                </span>-->
+<!--            </t>-->
+<!--        </t>-->
+<!--    </t>-->
+<!--    -->
+<!--</templates>-->
+
+
